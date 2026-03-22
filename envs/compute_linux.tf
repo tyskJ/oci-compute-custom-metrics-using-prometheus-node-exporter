@@ -127,11 +127,7 @@ resource "oci_core_instance" "oracle_instance" {
     ssh_authorized_keys = tls_private_key.ssh_keygen_oracle.public_key_openssh
     user_data           = base64encode(file("./userdata/oraclelinux_init.sh"))
   }
-  defined_tags = {
-    format("%s.%s", oci_identity_tag_namespace.common.name, oci_identity_tag.key_env.name)                = "prd"
-    format("%s.%s", oci_identity_tag_namespace.common.name, oci_identity_tag.key_managedbyterraform.name) = "true"
-    "Compute.CloudAgent"                                                                                  = "oracle"
-  }
+  defined_tags = local.common_defined_tags
   lifecycle {
     ignore_changes = [metadata]
   }
