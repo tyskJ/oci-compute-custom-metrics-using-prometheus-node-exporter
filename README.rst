@@ -1,7 +1,7 @@
 .. image:: ./doc/001samune.png
 
 =====================================================================
-OCI Compute のカスタムメトリクスを Prometheus Node Exporter で取得する - Linux/Windows
+OCI Compute のカスタムメトリクス取得方法 - Management Agent Plugin 編
 =====================================================================
 * `詳細 <>`_
 
@@ -72,7 +72,7 @@ OCI Compute のカスタムメトリクスを Prometheus Node Exporter で取得
   cat <<EOF > config.oci.tfbackend
   bucket = "terraform-working"
   namespace = "テナンシに一意に付与されたネームスペース"
-  key = "oci-compute-custom-metrics-using-prometheus-node-exporter/terraform.tfstate"
+  key = "oci-compute-custom-metrics-broadcast-management-agent-plugin/terraform.tfstate"
   auth = "SecurityToken"
   config_file_profile = "ADMIN"
   region = "ap-tokyo-1"
@@ -130,7 +130,7 @@ OCI Compute のカスタムメトリクスを Prometheus Node Exporter で取得
 .. code-block:: bash
 
   COMPARTMENT_ID=$(oci iam compartment list \
-  --name oci-compute-custom-metrics-using-prometheus-node-exporter \
+  --name oci-compute-custom-metrics-broadcast-management-agent-plugin \
   --query "data[0].\"id\"" \
   --raw-output \
   --profile ADMIN \
