@@ -124,11 +124,11 @@ Windows
 
 .. code-block:: powershell
 
-  msiexec.exe /i <path-to-msi-file> --% ENABLED_COLLECTORS=cpu,logical_disk,memory,process,service
+  msiexec.exe /i <full-path-to-msi-file> --% ENABLED_COLLECTORS=cpu,logical_disk,memory,process,service
 
 .. note::
 
-  * ``path-to-msi-file`` は適宜変更すること
+  * ``path-to-msi-file`` は適宜変更すること (必ずフルパスで指定してください)
   * 取得対象メトリクスは適宜修正すること
   * コマンド実行後インストールプロンプトが表示されるため、デフォルトで完了させる
 
