@@ -8,6 +8,7 @@ Windows
 .. image:: ./doc/image/pic1.png
   :scale: 100%
 
+#. ``Download and Keys`` から、``Agent for WINDOWS (X86_64)``` をクリックしてローカルPCにダウンロード
 
 参考資料
 =====================================================================
