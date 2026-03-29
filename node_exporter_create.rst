@@ -26,7 +26,8 @@ Linux
 
 3. サービス化
 ---------------------------------------------------------------------
-* ``Socket`` ファイル起動とするため、``socket`` ファイルを作成 (あえて)
+
+#. ``Socket`` ファイル起動とするため、``socket`` ファイルを作成 (あえて)
 
 **/etc/systemd/system/node_exporter.socket**
 
@@ -51,7 +52,7 @@ Linux
   # → systemctl enable すると OS起動時に自動でlisten開始される
   WantedBy=sockets.target
 
-* ソケットがリクエストを受信したら起動させるサービスを作成
+#. ソケットがリクエストを受信したら起動させるサービスを作成
 
 **/etc/systemd/system/node_exporter.service**
 
@@ -85,7 +86,7 @@ Linux
   # ただし socket activation の場合は .socket 側を enable するのが一般的
   WantedBy=multi-user.target
 
-* ``OPTIONS`` を指定するための ``sysconfig`` ファイルを作成
+#. ``OPTIONS`` を指定するための ``sysconfig`` ファイルを作成
 
 **/etc/sysconfig/node_exporter**
 
@@ -97,7 +98,7 @@ Linux
 
   * 取得対象メトリクスは適宜修正すること
 
-* ソケットを自動起動設定にする
+#. ソケットを自動起動設定にする
 
 .. code-block:: bash
 
