@@ -95,6 +95,18 @@ Windows
         Checking Java version
     "Agent only supports 64 bit and 32 bit JDK 8 (with a minimum upgrade version JDK 8u281). Please set your preferred path in JAVA_HOME"
 
+1. `こちら <https://www.oracle.com/jp/java/technologies/javase/javase8u211-later-archive-downloads.html#:~:text=Java%20SE%20Development%20Kit%208u281>`_ から ``jdk-8u281-windows-x64.exe`` をダウンロード
+
+.. warning::
+
+  * 事前に Oracle アカウントが必要
+  * 商用利用の場合はライセンスが必要になるので注意
+
+2. ``exe`` ファイルを実行
+
+.. note::
+
+  * 設定はデフォルトでインストール
 
 参考資料
 =====================================================================
